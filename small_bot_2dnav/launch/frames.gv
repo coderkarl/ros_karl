@@ -1,0 +1,14 @@
+digraph G {
+"odom" -> "body"[label="Broadcaster: /odometry_publisher\nAverage rate: 10.208 Hz\nMost recent transform: 1482890986.343 ( 0.086 sec old)\nBuffer length: 4.800 sec\n"];
+"axis" -> "leftWheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.208 Hz\nMost recent transform: 1482890986.343 ( 0.086 sec old)\nBuffer length: 4.800 sec\n"];
+"axis" -> "rightWheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.208 Hz\nMost recent transform: 1482890986.343 ( 0.086 sec old)\nBuffer length: 4.800 sec\n"];
+"body" -> "neato_laser"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.208 Hz\nMost recent transform: 1482890986.343 ( 0.086 sec old)\nBuffer length: 4.800 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1482890986.429"[ shape=plaintext ] ;
+ }->"odom";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1482890986.429"[ shape=plaintext ] ;
+ }->"axis";
+}
